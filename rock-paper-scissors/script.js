@@ -11,7 +11,7 @@ choiceButtons.forEach(button => {
         player = button.textContent;
         computerTurn();
         playerText.textContent = `Player: ${player}`;
-        computerText.textContent = `Computer: ${computer}`;
+        computerText.textContent = `${computer}: Computer`;
         resultText.textContent = checkWinner();
     });
 });
@@ -37,5 +37,4 @@ function checkWinner() {
     if (computer === "🪨") return (player === "🧻") ? "You win!" : "You lose!";
     if (computer === "🧻") return (player === "✂️") ? "You win!" : "You lose!";
     if (computer === "✂️") return (player === "🪨") ? "You win!" : "You lose!";
-
 }
